@@ -1,0 +1,11 @@
+body{
+    background-color: bisque;
+}
+.pageTitle{
+    color: white;    
+}
+.welcome{
+    background-color: aquamarine;
+    height: 100%;
+    width: 100%;
+}
