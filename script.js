@@ -3,9 +3,6 @@ getPriceBtn.addEventListener(`click`, getPriceOfBitcoin);
 
 const revealPrice = document.getElementById('price-shown');
 
-const lernAboutMeBtn = document.getElementById('my-api-about-me');
-lernAboutMeBtn.addEventListener(`click`, showMe);
-
 function getPriceOfBitcoin(){
     let tender = document.getElementById(`selected-tender`).value;
     let html = "";
@@ -46,18 +43,4 @@ function getPriceOfBitcoin(){
         revealPrice.innerHTML = html;
     });
     
-}
-
-function showMe(){
-    let html = "";
-    fetch('http://localhost:3000/api/hello')
-    .then(res => res.json())
-    .then(data => {
-        html = `
-        <div>
-            <h3>${data.name}</h3>
-            <h3>${data.bday}</h3>
-        </div>
-        `
-    })
 }
